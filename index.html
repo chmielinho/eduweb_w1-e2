@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Eduweb.pl - Bootcamp</title>
+	<meta name="description" content="Site contain every exercise done on bootcamp">
+	<meta name="author" content="Mateusz Chmielarz">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		.bg { background: #ffc2c2; font-weight: bold; border: 2px solid #ff9595; } body section { width: 80%; margin: 20px auto; } body h2 { background: #d4d4d4; border: 2px solid #9d9d9d; padding: 5px; padding-left: 20px; } body > h2 { text-align: center; font-size: 50px; margin: 0; padding: 0; background: none; border: 0; } body .answer { border-top: 2px solid #9d9d9d; padding-top: 20px; } body .answer .zadanie4 { border: 2px solid #ff9595; } body .answer > a { display: block; width: 250px; text-align: center; margin-right: 10%; margin-left: auto; color: #9d9d9d; font-weight: bold; font-size: 20px; } body ol li { margin: 10px auto; } body #side-menu { width: 150px; position: fixed; top: calc(50% - 100px); left: -150px; background: #000; color: white; border-radius: 0 0 5px 0; } body #side-menu ul { list-style: none; padding: 0; text-align: center; } body #side-menu ul a { display: block; padding: 5px 0; color: white; text-decoration: none; font-size: 20px; width: 100%; } body #side-menu ul a:hover { background: grey; } body #btn { position: fixed; top: calc(50% - 100px); left: 0; height: 50px; width: 50px; background: #000; color: white; border: 0; border-left: 2px solid grey; border-radius: 0 5px 0 0; outline: none; } body #btn1 { position: fixed; top: calc(50% - 50px); left: 0; height: 50px; width: 50px; background: white; color: black; border: 2px solid black; border-left: 0; border-top: 0; border-radius: 0 0 5px 0; outline: none; }
+	</style>
+</head>
+<body>
+	<section id="zad2">
+		<div class="headline">
+			<h2>Zadanie nr 2</h2>
+			<h3>Selektory w jQuery</h3>
+			<p>Podaj przykłady selektorów, które pozwolą znaleźć na stronie następujące elementy:</p>
+				<ol>
+					<li>wszystkie elementy &lt; div &gt;, posiadające zarówno klasę “grid” oraz klasę “grid-12”,</li>
+					<li>wszystkie elementy &lt; a &gt;, których atrybut “href" zaczyna się na “http”, znajdujące się w elemencie o klasie “nav”,</li>
+					<li>wszystkie elementy &lt; input &gt;, których typ to “radio” lub “checkbox” oraz dodatkowo nie są aktualnie zaznaczone (checked),</li>
+					<li>wyłącznie pierwszy element &lt; p &gt;, który jest pusty (nie zawiera dzieci) oraz znajduje się w elemencie &lt; div &gt; z identyfikatorem “text”,</li>
+					<li>wszystkie elementy z klasą “pagination-item”, które nie są elementem &lt; span &gt;.</li>
+				</ol>
+		</div>
+		<div class="answer">
+			<a href="https://github.com/chmielinho/eduweb_w1-e2">Rozwiązanie na github.com</a>
+			<ol>
+				<li>
+					<div></div>
+					<div class="grid grid12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</div>
+					<div class="grid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</div>
+					<div class="grid12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</div>
+					<div class="grid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</div>
+					<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</div>
+					<div class="grid12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</div>
+				</li>
+				<li>
+					<div class="nav"><a href="http:\\eduweb.pl">http:\\eduweb.pl</a></div>
+					<div><a href="http:\\eduweb.pl">http:\\eduweb.pl</a></div>
+					<div class="nav"><a href="www.eduweb.pl">www.eduweb.pl</a></div>
+					<div class="nav"><a href="http:\\eduweb.pl">http:\\eduweb.pl</a></div>
+					<div><a href="http:\\eduweb.pl">http:\\eduweb.pl</a></div>					
+				</li>
+				<li>
+					<form>
+						<label>Pole input radio</label>
+						<input type="radio">
+					</form>
+					<form>
+						<label>Pole input checkbox</label>
+						<input type="checkbox">
+					</form>
+					<form>
+						<label>Pole input radio checked</label>
+						<input type="radio" checked>
+					</form>
+					<form>
+						<label>Pole input checkbox</label>
+						<input type="checkbox">
+					</form>
+					<form>
+						<label>Pole input text checked</label>
+						<input type="text" checked>
+					</form>
+					<form>
+						<label>Pole input radio</label>
+						<input type="radio">
+					</form>
+					<form>
+						<label>Pole input checkbox checked</label>
+						<input type="checkbox" checked>
+					</form>
+					<form>
+						<label>Pole input text</label>
+						<input type="text">
+					</form>
+				</li>
+				<li>
+					<div id="text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</p>
+						<p></p>
+					</div>
+					<div>
+						<p></p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</p>
+					</div>
+					<div id="text">
+						<p>
+							<span></span>
+						</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</p>
+					</div>
+					<div id="text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</p>
+						<p></p>
+					</div>
+					<div id="text">
+						<p></p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</p>
+					</div>
+					<div id="text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</p>
+						<p></p>
+					</div>
+					<div>
+						<p></p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</p>
+					</div>
+				</li>
+				<li>
+					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</span>
+					<span class="pagination-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</span>
+					<div class="pagination-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</div>
+					<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</div>
+					<p class="pagination-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis commodo pretium. Cras ut volutpat eros. Phasellus luctus velit non.</p>
+				</li>
+			</ol>
+		</div>
+	</section>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+	<script>
+	(function($) {
+	
+		$.fn.bg = function(){
+			return this.addClass("bg");		
+		};
+
+		$('.grid.grid12').bg();
+		$('a[href^="http"]', '.nav').bg();
+		$('input[type=checkbox], input[type=radio]').not(":checked").bg();
+		$('p:first:empty', 'div#text').bg();
+		$('.pagination-item:not(span)').bg();
+	})(jQuery);
+	</script>
+</body>
+</html>

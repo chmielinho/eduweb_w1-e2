@@ -1,7 +1,7 @@
 Second exercise on eduweb.pl bootcamp.
 ======
 
-Created js file with selectors from exercise 2 in week 1.
+Created html file with stuff from exercise 2 in week 1.
 
 Exercise 2:
 Podaj przykłady selektorów, które pozwolą znaleźć na stronie następujące elementy:
